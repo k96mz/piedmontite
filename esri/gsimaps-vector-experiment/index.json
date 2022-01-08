@@ -7,7 +7,7 @@
  "tileMap":"tilemap",
  "defaultStyles": "resources/styles",
  "tiles": [
-  "https://ubukawa.github.io/vt-test/ne-test/{z}/{x}/{y}.pbf"
+  "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/{z}/{x}/{y}.pbf"
  ],
  "initialExtent": {
   "xmin": -2.0037507842788246E7,
