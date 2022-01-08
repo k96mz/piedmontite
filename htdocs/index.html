@@ -1,0 +1,34 @@
+<html>
+<body>
+
+<h2>Your server seems working.</h2>
+
+Hello. This is test. <br><br><br>
+
+
+
+<h3>Delivery of Vector Tile Server Information</h3>
+http://(your server name):(port)/esriIF/gsimaps-vector-experiment/VectorTileServer
+<br>
+Try <a href='./esriIF/gsimaps-vector-experiment/VectorTileServer'>./esriIF/gsimaps-vector-experiment/VectorTileServer</a>
+<br>
+<br>
+<h3>Delivery of Style Information</h3>
+http://(your server name):(port)/esriIF/gsimaps-vector-experiment/VectorTileServer/resources/styles
+<br>
+Try <a href='./esriIF/gsimaps-vector-experiment/VectorTileServer/resources/styles'>./esriIF/gsimaps-vector-experiment/VectorTileServer/resources/styles</a>
+<br>
+<br>
+<h3>Delivery of Tilemap Information</h3>
+http://(your server name):(port)/esriIF/gsimaps-vector-experiment/VectorTileServer/tilemap/(zoom level)/(row)/(column)/(width(=32))/(height(=32))/
+<br>
+This is a simple tilemap fuction and does not fully cover ArcGIS REST API.
+From ZL0-5, row and column values should be always 0. At zoom level larger than 5, values for row and column may be muptiple of 32.
+Try an example here.<a href='./esriIF/gsimaps-vector-experiment/VectorTileServer/tilemap/4/0/0/32/32'>./esriIF/gsimaps-vector-experiment/VectorTileServer/tilemap/4/0/0/32/32</a>
+<br>
+<br>
+
+<br>
+
+</body>
+</html>
