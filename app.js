@@ -1,6 +1,7 @@
 const config = require('config')
 const express = require('express')
 const cors = require('cors') 
+const fs = require('fs')
 const morgan = require('morgan')
 const winston = require('winston')
 const DailyRotateFile = require('winston-daily-rotate-file')
