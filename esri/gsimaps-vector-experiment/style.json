@@ -4,7 +4,7 @@
   "sources": {
     "v": {
       "type": "vector",
-      "url": "../../",
+      "url": "http://localhost:8836/esriIF/gsimaps-vector-experiment/VectorTileServer",
       "attribution":"<a href=\"https://maps.gsi.go.jp/vector/\" target=\"_blank\">地理院地図Vector（仮称）</a>"
     }
   },
