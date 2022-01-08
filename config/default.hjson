@@ -5,7 +5,6 @@
  fullchainPath: ./ssh-key/cert.pem
  logDirPath: log
  port: 8836
- mbtilesDir: mbtiles
  esriDir: esri
  esri-tilemap-min:{
   gsimaps-vector-experiment: 4
