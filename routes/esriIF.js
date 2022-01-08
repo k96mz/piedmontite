@@ -33,6 +33,24 @@ router.get(`/:t/VectorTileServer`,
 }
 )
 
+router.get(`/:t/VectorTileServer/index.json`,  
+ async function(req, res) {
+  busy = true
+  const t = req.params.t
+  var indexjsonPath = `${esriDir}/${t}/index.json`
+
+  if(fs.existsSync( indexjsonPath )){   
+    res.sendFile('index.json', { root: `./${esriDir}/${t}` })
+    busy = false
+  } else {
+    console.log(indexjsonPath)
+    res.status(404).send(`index.json not found: esriIF/${t}/VectorTileServer`)
+    busy = false
+  }
+}
+)
+
+
 //Returing a style file --> make sure that the style.json is ready
 router.get(`/:t/VectorTileServer/resources/styles`,  //need to think about other request f=json, index.json etc
  async function(req, res) {
@@ -50,6 +68,24 @@ router.get(`/:t/VectorTileServer/resources/styles`,  //need to think about other
   }
 }
 )
+
+router.get(`/:t/VectorTileServer/resources/styles/root.json`,  //need to think about other request f=json, index.json etc
+ async function(req, res) {
+  busy = true
+  const t = req.params.t
+  var stylejsonPath = `${esriDir}/${t}/style.json`
+
+  if(fs.existsSync( stylejsonPath )){   
+    res.sendFile('style.json', { root: `./${esriDir}/${t}` })
+    busy = false
+  } else {
+    console.log(stylejsonPath)
+    res.status(404).send(`style.json (root.json) not found: esriIF/${t}/VectorTileServer/resources/style`)
+    busy = false
+  }
+}
+)
+
 
 //Tilemap function- t,left,top,m,ny are extracted from the path
 router.get(`/:t/VectorTileServer/tilemap/:z/:row/:column/:width/:height`,  //need to think about other request f=json, index.json etc

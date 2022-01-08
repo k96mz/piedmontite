@@ -1,7 +1,6 @@
 const config = require('config')
 const express = require('express')
 const cors = require('cors') 
-const fs = require('fs')
 const morgan = require('morgan')
 const winston = require('winston')
 const DailyRotateFile = require('winston-daily-rotate-file')
@@ -43,6 +42,7 @@ app.listen(port, () => {
 })
 
 /* for https
+const fs = require('fs')
 const spdy = require('spdy') //for https
 const privkeyPath = config.get('privkeyPath') //for https
 const fullchainPath = config.get('fullchainPath') //for https
