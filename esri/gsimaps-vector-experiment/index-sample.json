@@ -1,7 +1,7 @@
 {
  "currentVersion": 10.9,
- "name": "GSImaps Vector test",
- "copyrightText": "地理院地図Vector（仮称）",
+ "name": "Test with Natural Earth",
+ "copyrightText": "NaturalEarth",
  "capabilities": "TilesOnly,Tilemap",
  "type": "indexedVector",
  "tileMap":"tilemap",
@@ -30,7 +30,7 @@
   }
  },
  "minScale": 2.958287637957775E8,
- "maxScale": 282.124294,
+ "maxScale": 9244648.868618,
  "tileInfo": {
   "rows": 512,
   "cols": 512,
@@ -129,30 +129,10 @@
     "level": 16,
     "resolution": 1.19432856698734,
     "scale": 4513.9887055
-   },
-   {
-    "level": 17,
-    "resolution": 0.597164283427525,
-    "scale": 2256.9943525
-   },
-   {
-    "level": 18,
-    "resolution": 0.2985821417799085,
-    "scale": 1128.4971765
-   },
-   {
-    "level": 19,
-    "resolution": 0.1492910708238085,
-    "scale": 564.248588
-   },
-   {
-    "level": 20,
-    "resolution": 0.07464553541190416,
-    "scale": 282.124294
    }
   ]
  },
- "maxzoom": 20,
+ "maxzoom": 16,
  "resourceInfo": {
   "styleVersion": 8,
   "tileCompression": "gzip",

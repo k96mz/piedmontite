@@ -1,58 +1,61 @@
 {
   "version": 8,
-  "name": "test-simple",
+  "name": "GSI Vector -simple test",
   "sources": {
-    "ne-test": {
+    "v": {
       "type": "vector",
-      "url": "../../"
+      "url": "../../",
+      "attribution":"<a href=\"https://maps.gsi.go.jp/vector/\" target=\"_blank\">地理院地図Vector（仮称）</a>"
     }
   },
-  "sprite": "https://ubukawa.github.io/vt-test/sprite/sprite",
-  "glyphs": "https://ubukawa.github.io/vt-test/font/{fontstack}/{range}.pbf",
+  "sprite": "https://gsi-cyberjapan.github.io/gsivectortile-mapbox-gl-js/sprite/std",
+  "glyphs": "https://maps.gsi.go.jp/xyz/noto-jp/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
       "type": "background",
-      "maxzoom": 8,
-      "paint": {"background-color": "rgba(135, 188, 196, 1)"}
+      "paint": {"background-color": "#D6EBF5"}
     },
     {
-      "id": "landmass",
+      "id": "ls-coastline",
+      "type": "line",
+      "source": "v",
+      "source-layer": "coastline",
+      "minzoom": 4,
+      "maxzoom": 9,
+      "layout": {"visibility": "visible"},
+      "paint": {"line-color": "#636566"}
+    },
+    {
+      "id": "pg-watera",
       "type": "fill",
-      "source": "ne-test",
-      "source-layer": "landmass",
-      "maxzoom": 8,
-      "paint": {"fill-color": "rgba(174, 255, 147, 1)"}
+      "source": "v",
+      "source-layer": "waterarea",
+      "minzoom": 4,
+      "maxzoom": 7,
+      "paint": {"fill-color": "rgba(46, 0, 255, 1)"}
     },
     {
-      "id": "coastline",
+      "id": "ls-boundary-pref",
       "type": "line",
-      "source": "ne-test",
-      "source-layer": "coastl",
+      "source": "v",
+      "source-layer": "boundary",
+      "minzoom": 6,
       "maxzoom": 8,
-      "paint": {"line-color": "rgba(58, 0, 160, 1)"}
+      "filter": ["all", ["==", "ftCode", 51212]],
+      "layout": {"line-cap": "square"},
+      "paint": {"line-color": "#000000", "line-dasharray": [10, 2, 1, 2]}
     },
     {
-      "id": "bndl",
+      "id": "ls-boundary-cty",
       "type": "line",
-      "source": "ne-test",
-      "source-layer": "bndl",
+      "source": "v",
+      "source-layer": "boundary",
+      "minzoom": 4,
       "maxzoom": 8,
-      "paint": {"line-color": "rgba(138, 138, 138, 1)"}
-    },
-    {
-      "id": "popp",
-      "type": "symbol",
-      "source": "ne-test",
-      "source-layer": "popp",
-      "minzoom": 2,
-      "maxzoom": 8,
-      "layout": {
-        "text-font": ["sans"],
-        "text-field": "{NAME}",
-        "icon-image": "national_capital",
-        "text-offset": [1, 1]
-      }
+      "filter": ["all", ["==", "ftCode", 51221]],
+      "layout": {"line-cap": "square"},
+      "paint": {"line-color": "rgba(34, 24, 21, 1)"}
     }
   ],
   "_ssl": true
