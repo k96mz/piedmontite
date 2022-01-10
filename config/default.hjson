@@ -8,9 +8,11 @@
  esriDir: esri
  esri-tilemap-min:{
   gsimaps-vector-experiment: 4
+  gsimaps-vector-style: 4
  }
  esri-tilemap-max:{
   gsimaps-vector-experiment: 17
+  gsimaps-vector-style: 14
  }
 }
 
