@@ -20,4 +20,5 @@ A test server for GSI Maps Vector Consumption in ArcGIS Online
 
 
 # References
-* https://github.com/gsi-cyberjapan/gsimaps-vector-experiment
+* https://github.com/gsi-cyberjapan/gsimaps-vector-experiment  
+* https://qiita.com/T-ubu/items/1f772fd92ec8dfb0c2b2
