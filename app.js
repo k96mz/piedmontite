@@ -28,12 +28,14 @@ logger.stream = {
 
 // app
 const app = express()
+var VTRouter = require('./routes/VT') //tiling
 var esriIFRouter = require('./routes/esriIF') //esri interface (tilemap, etc..)
 app.use(cors())
 app.use(morgan(morganFormat, {
   stream: logger.stream
 }))
 app.use(express.static(htdocsPath))
+app.use('/VT', VTRouter)
 app.use('/esriIF', esriIFRouter) //esri interface
 
 //for http
