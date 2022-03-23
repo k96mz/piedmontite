@@ -4,7 +4,6 @@ const config = require('config')
 const fs = require('fs')
 const cors = require('cors')
 const MBTiles = require('@mapbox/mbtiles')
-const TimeFormat = require('hh-mm-ss')
 
 // config constants
 const mbtilesDir = config.get('mbtilesDir')
