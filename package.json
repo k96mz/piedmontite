@@ -18,15 +18,14 @@
   },
   "dependencies": {
     "@mapbox/mbtiles": "^0.12.1",
-    "config": "^3.3.6",
+    "config": "^3.3.12",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "fs": "0.0.1-security",
+    "express": "^4.21.2",
     "hjson": "^3.2.2",
     "morgan": "^1.10.0",
-    "sqlite3": "^5.0.2",
     "spdy": "^4.0.2",
-    "winston": "^3.3.3",
-    "winston-daily-rotate-file": "^4.5.5"
+    "sqlite3": "^5.1.7",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
   }
 }
